@@ -131,7 +131,7 @@ spec:
             - name: K8SAGENT
               value: "TRUE"
             - name: DOCKER_EVENTS
-              value: "FALSE"
+              value: "TRUE"
             - name: KUBERNETES_TYPE
               value: "K8S"
             - name: CONTAINER_ENGINE
@@ -215,7 +215,7 @@ spec:
             - name: INTEGRATION_RES_UUID
               value: "eb0d0933-aa29-4f0d-989b-32f2bc02b81d"
             - name: K8S_EVENTS
-              value: "FALSE"
+              value: "TRUE"
             - name: KUBERNETES_TYPE
               value: "K8S"
             - name: CONTAINER_ENGINE
@@ -266,8 +266,8 @@ data:
     - InvalidDiskCapacity
     - FreeDiskSpaceFailed
     pod:
-    - Failed
-    - InspectFailed
+    - Failed:Critical
+    - InspectFailed:Warning
     - ErrImageNeverPull
     - Killing
     - OutOfDisk
